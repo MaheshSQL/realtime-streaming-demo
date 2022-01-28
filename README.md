@@ -2,13 +2,16 @@
 Realtime Streaming Data Visualisation Demo 
 WSL 2.0 Ubuntu 18.04
 
-# Setup Node
-
-# Setup REACT
-
-# Setup SQL Server
-
-
+## Setup Node
+<Install packages>
+  
+## Setup REACT
+<Install Packages>
+  
+## Setup SQL Server
+<Create SQL DB, Table, Procedure>
+<Run procedure to simulate sensor readings>
+  
 # Run Node App
 node server.js
 
