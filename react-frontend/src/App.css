@@ -1,0 +1,78 @@
+/* .App {
+  text-align: center;
+} */
+
+.Button1 {
+  background-color: green;
+  color: white;
+  font-size: 15px;
+  padding: 10px 30px;
+  border-radius: 50px;
+  margin: 5px 0px 0px 20px;
+  cursor: pointer;  
+  justify-content: space-between;
+  /* display: block;  */
+  position: absolute;
+  text-decoration: none;
+  z-index: 100;
+  
+  
+}
+
+.Button2 {
+  background-color: orange;
+  color: white;
+  font-size: 15px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin: 5px 0px 0px 20px;
+  cursor: pointer;  
+  justify-content: space-between;
+  /* display: block;  */
+  position: absolute;
+  text-decoration: none;
+  z-index: 100;
+  
+}
+
+.Button3 {
+  background-color: red;
+  color: white;
+  font-size: 15px;
+  padding: 10px 30px;
+  border-radius: 50px;
+  margin: 5px 0px 0px 20px;
+  cursor: pointer;  
+  justify-content: space-between;
+  /* display: block;  */
+  position: absolute;
+  text-decoration: none;
+  z-index: 100;
+  
+}
+
+
+
+.Table1{
+  
+  width: 20%;  
+  /* padding: 0px 50px; */
+  text-align: center;
+  /* position: absolute; */
+  margin-left: 300px; 
+}
+
+.Table2{
+  
+  /* width: 20%;   */
+  /* padding: 0px 50px; */
+  text-align: center;
+  /* position: absolute; */
+  margin-left: 250px; 
+}
+
+.Td1{
+  padding-top: 150px;
+}
+
+

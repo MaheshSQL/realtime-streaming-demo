@@ -1,0 +1,33 @@
+.Toolbar{
+    height: 56px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: dodgerblue;
+    /* display: flex; */
+    justify-content: space-around;
+    color: white; 
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    z-index: 90;
+    
+}
+
+.Text{
+    color: white;
+    font-size: 25px;
+    text-align: left;
+    
+}
+
+.Table3{
+  
+    /* width: 50%;   */
+    /* padding-left: 0px; */
+    text-align: center;
+    margin-left: 10px;
+    
+    
+  }
