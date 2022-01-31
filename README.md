@@ -6,7 +6,7 @@ WSL 2.0
 Ubuntu 18.04
 SQL Server
 REACT
-Node 
+Node
 
 ### Output
 ![Screenshot](./images/StreamingMonitor.png)
