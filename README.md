@@ -15,7 +15,7 @@ Install REACT and Packages. See package.json
 - Create SQL Database, Table, Stored Procedures.
 - Run procedure to simulate sensor readings.
   
-# Run the demo
+## Run the demo
 ### Run Node App
 node server.js
 
