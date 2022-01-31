@@ -42,7 +42,8 @@ class App extends Component {
         },
         xaxis: {
           categories: [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        }
+        },
+        colors: ['#FEB019']
       },
 
       lineChartSeriesS1 : [
@@ -58,7 +59,8 @@ class App extends Component {
         },
         xaxis: {
           categories: [1, 2, 3, 4, 5, 6, 7, 8, 9]
-        }
+        },
+        colors: ['#00E396']
       },
 
       lineChartSeriesS2 : [
