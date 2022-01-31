@@ -61,4 +61,101 @@ BEGIN
 
 END
 
---Step 4: During demo to generate sensor readings, please call stored procedure above with example syntax given at the begining of the procedure.
+
+
+--Step 4:
+/****** Object:  StoredProcedure [dbo].[InsertSensorReadingsTooth120]    Script Date: 31/01/2022 3:24:04 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+--EXEC [dbo].[InsertSensorReadingsTooth120] @SensorID='S1', @Delay='00:00:01'
+--EXEC [dbo].[InsertSensorReadingsTooth120] @SensorID='S2', @Delay='00:00:04'
+ALTER PROCEDURE [dbo].[InsertSensorReadingsTooth120]
+@SensorID VARCHAR(50) = 'S1',
+@Delay VARCHAR(50) = '00:00:01'
+AS 
+
+BEGIN
+
+DECLARE @Value DECIMAL(18,10) = 0
+
+-----------
+
+	DECLARE db_cursor CURSOR FOR 
+	SELECT Value FROM
+	(
+		SELECT 0 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 1.2 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 1.2 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 1.2 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 0 AS Value UNION ALL
+		SELECT 1 AS Value UNION ALL
+		SELECT 1 AS Value 
+	) AS DataTable
+
+	OPEN db_cursor  
+	FETCH NEXT FROM db_cursor INTO @Value
+
+	WHILE @@FETCH_STATUS = 0  
+	BEGIN  
+
+		 INSERT INTO [dbo].[SensorReadings]
+			   ([SensorID]
+			   ,[InsertDateTime]
+			   ,[Reading])
+		 VALUES
+			   (@SensorID
+			   ,GETDATE()
+			   ,@Value			   
+			   )	  
+
+		  WAITFOR DELAY @Delay --How many seconds
+
+		  FETCH NEXT FROM db_cursor INTO @Value
+	END 
+
+	CLOSE db_cursor  
+	DEALLOCATE db_cursor 
+
+
+END
+
+--Step 5: During demo to generate sensor readings, please call any of the above stored procedures above, with example call syntax given at the begining of the procedure.
