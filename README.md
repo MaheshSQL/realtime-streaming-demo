@@ -2,6 +2,8 @@
 Realtime Streaming Data Visualisation Demo 
 WSL 2.0 Ubuntu 18.04
 
+![Screenshot](./images/StreamingMonitor.png)
+
 ## Setup Node
 <Install packages>
   
