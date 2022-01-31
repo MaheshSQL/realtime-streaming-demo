@@ -1,10 +1,21 @@
 # realtime-streaming-demo
-Realtime Streaming Data Visualisation Demo 
-WSL 2.0 Ubuntu 18.04
+Realtime Streaming Data Visualisation Demo built on simulated data.
+Useful to see streaming in action for Edge deployment use cases.
 
+WSL 2.0 
+Ubuntu 18.04
+SQL Server
+REACT
+Node
+
+### Output
 ![Screenshot](./images/StreamingMonitor.png)
 
 ## Setup
+
+### Clone
+Clone this repo.
+
 ### Setup Node
 Install node and packages. See package.json
   
